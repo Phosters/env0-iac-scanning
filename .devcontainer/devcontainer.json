@@ -26,13 +26,16 @@
 		},
 		"ghcr.io/dhoeric/features/terraform-docs:1": {}
 	},
+	"postCreateCommand": "/bin/bash -i -c .devcontainer/startup_script.sh",
+	"postAttachCommand": "minikube start",
 	// Configure tool-specific properties.
 	"customizations": {
 		// Configure properties specific to VS Code.
 		"vscode": {
 			// Add the IDs of extensions you want installed when the container is created.
 			"extensions": [
-				"hashicorp.terraform"
+				"hashicorp.terraform",
+				"ms-kubernetes-tools.vscode-kubernetes-tools"
 			]
 		}
 	},
