@@ -1,0 +1,24 @@
+---
+checks:
+  - code: CUS999
+    description: Make sure S3 bucket ACL is NOT public-read if it has a Scope=PCI tag
+    impact: We would violate our PCI compliance
+    resolution: Make sure the ACL is not public-read
+    requiredTypes:
+      - resource
+    requiredLabels:
+      - aws_s3_bucket
+    severity: CRITICAL
+    matchSpec:
+        action : or
+        predicateMatchSpec :
+        - action : notContains
+          name : tags
+          value:
+            Scope: "PCI"
+        - action : notContains
+          name : acl
+          value: public-read
+    errorMessage: S3 bucket ACL is public-read with Scope=PCI tag
+    relatedLinks:
+      - http://internal.acmecorp.com/standards/aws/tagging.html
