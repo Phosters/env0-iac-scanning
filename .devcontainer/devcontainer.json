@@ -22,5 +22,20 @@
 			"version": "latest"
 		},
 		"ghcr.io/dhoeric/features/terraform-docs:1": {}
+	},
+	// Configure tool-specific properties.
+	"customizations": {
+		// Configure properties specific to VS Code.
+		"vscode": {
+			// Add the IDs of extensions you want installed when the container is created.
+			"extensions": [
+				"hashicorp.terraform"
+			]
+		}
+	},
+	"hostRequirements": {
+		"cpus": 4,
+		"memory": "8gb",
+		"storage": "32gb"
 	}
 }
