@@ -1,0 +1,31 @@
+{
+	"terrascanConfig": {
+		"aws_s3_bucket": [
+			{
+				"id": "aws_s3_bucket.credit_cards_bucket",
+				"name": "credit_cards_bucket",
+				"module_name": "root",
+				"source": "s3_pci.tf",
+				"line": 1,
+				"type": "aws_s3_bucket",
+				"config": {
+					"acl": "public-read",
+					"bucket": "${local.bucket_name}",
+					"force_destroy": true,
+					"region": "${var.region}",
+					"tags": {
+						"Scope": "PCI"
+					}
+				},
+				"skip_rules": null,
+				"max_severity": "",
+				"min_severity": ""
+			}
+		]
+	},
+	"iacMetadata": {
+		"iacType": "terraform",
+		"iacPath": "Terraform/s3_pci.tf",
+		"providerType": "AWS"
+	}
+}

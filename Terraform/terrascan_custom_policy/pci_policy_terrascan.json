@@ -1,0 +1,16 @@
+{
+	"name": "PCI_S3_PUBLIC_READ",
+	"file": "pci_policy_terrascan.rego",
+	"policy_type": "AWS",
+	"resource_type": "aws_s3_bucket",
+	"template_args": {
+		"name": "PCI_S3_PUBLIC_READ",
+		"prefix": "",
+		"suffix": ""
+	},
+	"severity": "HIGH",
+	"description": "Make sure S3 bucket ACL is NOT public-read if it has a Scope=PCI tag",
+	"category": "Identity and Access Management",
+	"version": 1,
+	"id": "pci_policy_terrascan"
+}
