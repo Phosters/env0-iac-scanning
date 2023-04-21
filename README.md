@@ -21,7 +21,7 @@ checkov -d ./Terraform
 To output in a specific format such as JSON:
 
 ```bash
-checkov -d ./Terraform --output json
+checkov -d ./Terraform cle--output json
 ```
 
 To scan for the Kubernetes framework run the following command:
@@ -111,8 +111,6 @@ terrascan scan -d ./Kubernetes -i k8s
 ```
 
 ### Terrascan Custom Policy
-
-Now let’s examine the files you will need. You need to files, a `.json` one where you specify a few attributes of the policy and a `.rego` file where you define the actual policy.
 
 We’ve included these 2 files in the `terrascan_custom_policy` folder in our repo under the `Terraform` folder.
 
