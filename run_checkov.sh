@@ -8,3 +8,4 @@ if [ $? -ne 0 ]; then
     echo "Checkov scan failed. Please review the report."
     exit 1
 fi
+
