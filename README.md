@@ -119,3 +119,4 @@ terrascan scan --policy-path ./Terraform/terrascan_custom_policy --policy-path ~
 ```
 
 > Notice how we use the --policy-path to point to the directory where our custom rego policies live. The second --policy-path flag points to the general place where terrascan stores all its policies. If you omit the last --policy-path you will only run the scans for the custom policy that we created.
+> 
